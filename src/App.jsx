@@ -1,11 +1,11 @@
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div>
-      <Button colorScheme='blue'>Button</Button>
+      <Navbar />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
