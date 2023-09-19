@@ -1,25 +1,12 @@
-import { Grid, GridItem,Show } from "@chakra-ui/react";
+import { HStack, Image, Text } from "@chakra-ui/react";
+import LOGO from "../assets/Logo/logo.webp";
 
 function Navbar() {
   return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-    >
-      <GridItem bg="coral" area="nav">
-        Nav
-      </GridItem>
-      <Show above="lg">
-      <GridItem bg="gold" area="aside">
-        Aside
-      </GridItem>
-      </Show>
-      <GridItem bg="dodgerblue" area="main">
-        Main
-      </GridItem>
-    </Grid>
+    <HStack>
+      <Image src={LOGO} alt="Logo" boxSize="60px" />
+      <Text>Text</Text>
+    </HStack>
   );
 }
 
