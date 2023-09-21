@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
-AbortController;
+
 const useGame = () => {
   const [games, setGames] = useState([]);
   const [erro, setErro] = useState("");
@@ -20,5 +20,6 @@ const useGame = () => {
   }, []);
   return { games, erro };
 };
+
 
 export default useGame;
