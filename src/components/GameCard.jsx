@@ -4,17 +4,15 @@ import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../hooks/image-url";
 
-
 const GameCard = ({ game }) => {
   return (
-    <Card borderRadius={10} overflow="hidden">
+    <Card borderRadius={10} overflow="hidden" width="300px">
+      <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
-        <Image src={getCroppedImageUrl(game.background_image)} />
         <Heading fontSize="2xl">{game.name}</Heading>
         <HStack justifyContent={"space-between"}>
-        <PlatformIconList game={game} />
-        <CriticScore game={game}/>
-        
+          <PlatformIconList game={game} />
+          <CriticScore game={game} />
         </HStack>
       </CardBody>
     </Card>
@@ -25,7 +23,7 @@ GameCard.propTypes = {
   game: PropTypes.shape({
     name: PropTypes.string.isRequired,
     background_image: PropTypes.string.isRequired,
-    metacritic:PropTypes.number.isRequired,
+    metacritic: PropTypes.number.isRequired,
   }),
 };
 
