@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const GameCardContainer = ({ children }) => {
   return (
-    <Box borderRadius={10} overflow="hidden" width="300px" >
+    <Box borderRadius={10} overflow="hidden"  >
       {children}
     </Box>
   );
