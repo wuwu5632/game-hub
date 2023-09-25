@@ -1,6 +1,6 @@
 import useData from "./useData";
 
 
-const useGame = () => useData("/games")
+const useGame = (selectedGenre) => useData("/games",{params:{genres:selectedGenre?.id}},[selectedGenre?.id])
 
 export default useGame;
