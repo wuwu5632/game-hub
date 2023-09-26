@@ -4,7 +4,7 @@ import usePlatform from "../hooks/usePlatform";
 
 const PlatformSelector = ({ onSelectedPlatform,selectedPlatform }) => {
   const { data, erro } = usePlatform();
-  console.log(selectedPlatform)
+  
  
 
   if (erro) return null;
