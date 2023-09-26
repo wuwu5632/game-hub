@@ -6,13 +6,13 @@ import { useState } from "react";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/sortSelector";
 
-
 function App() {
   // const [selectedGenre, setSelectedGenre] = useState();
   // const [selectedPlatform, setSelectedPlatform] = useState();
   const [gameQuery, setGameQuery] = useState({
     genre: null,
     platform: null,
+    sortOrder: null,
   });
 
   console.log(gameQuery);
@@ -40,14 +40,19 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-      <HStack paddingLeft={2} marginBottom={4} >
-        <PlatformSelector
-          selectedPlatform={gameQuery.platform}
-          onSelectedPlatform={(platform) =>
-            setGameQuery({ ...gameQuery, platform })
-          }
-        />
-        <SortSelector />
+        <HStack paddingLeft={2} marginBottom={4}>
+          <PlatformSelector
+            selectedPlatform={gameQuery.platform}
+            onSelectedPlatform={(platform) =>
+              setGameQuery({ ...gameQuery, platform })
+            }
+          />
+          <SortSelector
+            selectedSortOrder={gameQuery.sortOrder}
+            onSelectSortOrder={(sortOrder) =>
+              setGameQuery({ ...gameQuery, sortOrder })
+            }
+          />
         </HStack>
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
