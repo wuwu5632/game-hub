@@ -13,7 +13,7 @@ const CriticScore = ({ game }) => {
 
 CriticScore.propTypes = {
   game: PropTypes.shape({
-    metacritic: PropTypes.number.isRequired,
+    metacritic: PropTypes.number,
   }),
 };
 
