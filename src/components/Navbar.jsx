@@ -3,11 +3,11 @@ import LOGO from "../assets/Logo/logo.webp";
 import ColorModeSwitch from "./ColorMode/ColorModeSwitch";
 import SearchBar from "./searchBar";
 
-function Navbar() {
+function Navbar({getInputValue}) {
   return (
     <HStack  padding="10px">
       <Image src={LOGO} alt="Logo" boxSize="60px" />
-      <SearchBar />
+      <SearchBar getInputValue={getInputValue}/>
       <ColorModeSwitch />
     </HStack>
   );
