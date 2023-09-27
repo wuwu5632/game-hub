@@ -22,7 +22,7 @@ const GameCard = ({ game }) => {
 GameCard.propTypes = {
   game: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    background_image: PropTypes.string.isRequired,
+    background_image: PropTypes.string,
   }),
 };
 
