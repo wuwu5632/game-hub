@@ -9,11 +9,11 @@ const GameCard = ({ game }) => {
     <Card>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
-        <Heading fontSize="2xl">{game.name}</Heading>
-        <HStack justifyContent={"space-between"}>
+        <HStack marginBottom={2} justifyContent={"space-between" }>
           <PlatformIconList game={game} />
           <CriticScore game={game} />
         </HStack>
+        <Heading fontSize="2xl">{game.name}</Heading>
       </CardBody>
     </Card>
   );

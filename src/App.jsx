@@ -38,7 +38,7 @@ function App() {
         />
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" paddingLeft={5}>
+        <GridItem area="aside" paddingLeft={5} paddingTop={1}>
           <GenreList
             selectedGenre={gameQuery.genre}
             onSelectedGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
@@ -46,7 +46,7 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main">
-        <Box paddingLeft={2} >
+        <HStack justifyContent="space-between" paddingX={3}>
           <GameHeading
             selectedPlatform={gameQuery.platform}
             selectedGenre={gameQuery.genre}
@@ -65,7 +65,8 @@ function App() {
               }
             />
           </HStack>
-        </Box>
+        </HStack>
+
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
     </Grid>
