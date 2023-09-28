@@ -7,6 +7,7 @@ import GameCardContainer from "./GameCardContianer";
 const GameGrid = ({gameQuery}) => {
   const { data:games, erro, isLoading } = useGame(gameQuery);
   const Skeletons = [1, 2, 3, 4, 5, 6];
+  
 
   if (erro) return <Text>{erro}</Text>
 
