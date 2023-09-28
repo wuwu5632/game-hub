@@ -8,9 +8,10 @@ const GameGrid = ({gameQuery}) => {
   const { data:games, erro, isLoading } = useGame(gameQuery);
   const Skeletons = [1, 2, 3, 4, 5, 6];
 
+  if (erro) return <Text>{erro}</Text>
+
   return (
-    <div>
-      {erro && <Text>{erro}</Text>}
+
       <SimpleGrid
         padding="10px"
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
@@ -28,7 +29,7 @@ const GameGrid = ({gameQuery}) => {
           </GameCardContainer>
         ))}
       </SimpleGrid>
-    </div>
+  
   );
 };
    
